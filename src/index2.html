@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+    <wrapper>
+
+    </wrapper>
+ 
+</body>
+<script>
+  class AddEl{
+    constructor(tagName = "div"){
+      this.$el = document.createElement(tagName);
+      this.$el.style.padding = '30px';
+      this.$el.style.marginTop = '100px';
+      this.$el.style.marginLeft = '100px';
+    };
+    // create(){console.log(this.$el);}
+    create(){
+     let wrap = document.querySelector('wrapper')
+      wrap.insertAdjacentElement("beforeend", this.$el )
+      return this
+    }
+    hide(){
+      this.$el.style.opacity = "0"
+    }
+    show(){this.$el.addEventListener('mouseout', () => {this.$el.style.opacity = "1"})}
+  }
+  class Qadro extends AddEl {
+    constructor(height,width,background,tagName){
+      super(tagName)
+      this.$el.style.height = height;
+      this.$el.style.width = width;
+      this.$el.style.background = background;
+    }
+     
+  }
+  class Round extends AddEl {
+    constructor(height,width,background,tagName){
+      super(tagName)
+      this.$el.style.height = height;
+      this.$el.style.width = width;
+      this.$el.style.background = background;
+      this.$el.style.borderRadius = "50%";
+    }
+  }
+
+
+  
+  let add = new Qadro("100px","100px","red","div").create();
+  let bdd = new Round("70px","70px","green","div").create();
+
+  console.log(add);
+  console.log(add.$el);
+  add.$el.addEventListener('mouseover', () => {add.hide()})
+  // add.hide()
+  // add.show()
+  // bdd.hide()
+  // bdd.show()
+
+  
+  
+ 
+
+
+</script>
+</html>
