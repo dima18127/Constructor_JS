@@ -1,6 +1,6 @@
 import image from "./assets/image.png";
 const text = 'Изучение JavaScript и программирования в целом не самая простая вещь, но безусловно стоит того. Это тяжело, реально тяжело и требует большой степени самоотверженности и настойчивости. Но обладая правильным мышлением в сочетании с правильными ресурсами, вы можете достичь превосходных результатов. Что бы вы ни делали, не забывайте, что программироване должно приносить радость. '
-import {titleBlock, textBlock, columnsBlock,imageBlock} from "./classes/block";
+import {titleBlock, textBlock, columnsBlock,imageBlock} from "../classes/block";
 
 
 export const model = [
